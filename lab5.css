@@ -1,0 +1,89 @@
+/* (a) Element Selector */
+h1, h2 {
+  color: #00509e;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+p {
+  color: #2b9348;
+  font-size: 16px;
+}
+
+/* (b) Class Selector */
+.highlight {
+  background-color: #fff3cd;
+  border-left: 4px solid #ffcc00;
+  padding: 5px 10px;
+}
+
+/* (c) ID Selector */
+#main-title {
+  color: #c1121f;
+  text-align: center;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 2px gray;
+}
+
+/* (d) Grouping Selector */
+h2, p, li {
+  border: 1px dashed #cccccc;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  padding: 6px;
+}
+
+/* (e) Descendant Selector */
+div p {
+  color: #0077b6;
+  font-style: italic;
+  background-color: #e3f2fd;
+}
+
+/* (f) Child Selector */
+div > ul > li {
+  background-color: #f8f9fa;
+  margin: 4px 0;
+  list-style-type: square;
+}
+
+/* (g) Attribute Selector */
+input[type="text"] {
+  border: 2px solid #1e90ff;
+  border-radius: 4px;
+}
+input[type="password"] {
+  border: 2px solid #dc143c;
+  border-radius: 4px;
+}
+input[type="email"] {
+  border: 2px solid #32cd32;
+  border-radius: 4px;
+}
+
+/* (h) Pseudo-classes */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+a:hover {
+  color: #ff6600;
+  text-decoration: underline;
+}
+li:first-child {
+  background-color: #ffe6e6;
+}
+li:last-child {
+  background-color: #e6f7ff;
+}
+
+/* (i) Pseudo-elements */
+h1::before {
+  content: " *";
+}
+h1::after {
+  content: "*";
+}
+p::first-letter {
+  font-size: 22px;
+  color: #9c27b0;
+  font-weight: bold;
+}
