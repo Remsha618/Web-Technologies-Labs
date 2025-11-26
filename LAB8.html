@@ -1,76 +1,78 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Lab 8 — Interactive Webpage (Event Listeners)</title>
-  <link rel="stylesheet" href="style8.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 8 – Interactive Interface</title>
+    <link rel="stylesheet" href="style8.css">
 </head>
 <body>
-  <header>
-    <h1>Interactive Page — Web Technologies Lab (Experiment 8)</h1>
-    <p class="subtitle">Multiple interactive elements demonstrating JavaScript event listeners and <code>this</code>.</p>
-  </header>
 
-  <main>
-    <!-- Section 1: Color controls -->
-    <section class="card" id="colors">
-      <h2>Change Page Color</h2>
-      <div class="controls">
-        <button class="color-btn" data-color="#ffffff">White</button>
-        <button class="color-btn" data-color="#f8f3e6">Cream</button>
-        <button class="color-btn" data-color="#e6f7ff">Light Blue</button>
-        <button class="color-btn" data-color="#ffe6f2">Pink</button>
-        <input id="bgPicker" type="color" value="#ffffff" title="Pick a color">
-      </div>
-      <p class="explain">Click a color button or choose from the color picker to change the page background.</p>
-    </section>
+<header>
+    <h1>Interactive Demo (Event Listeners)</h1>
+    <p class="sub">Upgraded and fully working version.</p>
+</header>
 
-    <!-- Section 2: Toggle text visibility -->
-    <section class="card" id="toggleText">
-      <h2>Toggle Text / Reveal More</h2>
-      <p id="secretText" class="hidden">This is the hidden text. It becomes visible when you click the toggle button.</p>
-      <button id="toggleBtn">Show / Hide Text</button>
-    </section>
+<!-- 1 – BUTTON PANEL -->
+<section class="card">
+    <h2>Button Panel</h2>
 
-    <!-- Section 3: Font size slider -->
-    <section class="card" id="fontSize">
-      <h2>Live Font Size</h2>
-      <label for="sizeRange">Change main paragraph font size:</label>
-      <input id="sizeRange" type="range" min="12" max="36" value="16">
-      <p id="samplePara">This paragraph's font size changes as you move the slider — live preview.</p>
-    </section>
+    <div class="btn-area">
+        <button class="action-btn" data-msg="Button A clicked!">A</button>
+        <button class="action-btn" data-msg="Button B clicked!">B</button>
+        <button class="action-btn" data-msg="Button C clicked!">C</button>
+    </div>
 
-    <!-- Section 4: Moving shape -->
-    <section class="card" id="shapeMover">
-      <h2>Move & Transform Shape</h2>
-      <div class="stage">
-        <div id="box" class="box" tabindex="0" title="Click to focus and use arrow buttons or drag"></div>
-      </div>
-      <div class="controls">
-        <button id="left">←</button>
-        <button id="up">↑</button>
-        <button id="down">↓</button>
-        <button id="right">→</button>
-        <button id="grow">Grow</button>
-        <button id="shrink">Shrink</button>
-      </div>
-      <p class="explain">Use the arrow buttons to move the box. Double-click the box to toggle rounded corners/rotation.</p>
-    </section>
+    <p id="outputMsg" class="info-text">Click a button to see a message.</p>
+</section>
 
-    <!-- Section 5: Live input using `this` -->
-    <section class="card" id="liveInput">
-      <h2>Live Preview (uses <code>this</code>)</h2>
-      <label for="nameInput">Type your name:</label>
-      <input id="nameInput" placeholder="Type here..." />
-      <p>Hello, <span id="namePreview">friend</span>!</p>
-    </section>
+<!-- 2 – IMAGE INTERACTION -->
+<section class="card">
+    <h2>Image Interaction</h2>
+    <img src="https://i.imgur.com/mI1GZqV.png" id="imageBox" alt="REMSHA" class="img-box">
+    <div class="img-controls">
+        <button id="rotateBtn">Rotate</button>
+        <button id="blurBtn">Blur</button>
+        <button id="resetImg">Reset</button>
+    </div>
+</section>
 
-    <footer>
-      <p>Lab 8 — Event Listeners demo — <small>Built for the Web Technologies Lab</small></p>
-    </footer>
-  </main>
+<!-- 3 – LIVE STYLING -->
+<section class="card">
+    <h2>Live Style Controller</h2>
 
-  <script src="app.js"></script>
+    <label>Text Color:</label>
+    <input type="color" id="colorPick">
+
+    <label>Border Radius:</label>
+    <input type="range" id="radiusRange" min="0" max="40">
+
+    <p id="styleLive" class="live-preview">This text changes LIVE!</p>
+</section>
+
+<!-- 4 – BOX GAME -->
+<section class="card">
+    <h2>Move the Ball</h2>
+
+    <div id="gameArea">
+        <div id="ball"></div>
+    </div>
+
+    <div class="controller">
+        <button id="moveLeft">LEFT</button>
+        <button id="moveUp">UP</button>
+        <button id="moveDown">DOWN</button>
+        <button id="moveRight">RIGHT</button>
+    </div>
+</section>
+
+<!-- 5 – INPUT MIRROR -->
+<section class="card">
+    <h2>Name Preview (Uses <code>this</code>)</h2>
+    <input id="nameField" placeholder="Type your name…">
+    <p class="mirror">Hello, <span id="nameShow">Guest</span>!</p>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
