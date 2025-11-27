@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Control Panel</title>
+    <link rel="stylesheet" href="stylelab9.css">
+</head>
+
+<body>
+
+    <h2>Interactive Control Panel</h2>
+
+    <div class="panel">
+
+        <button id="colorBtn">Change Color</button>
+
+        <label>Resize Box</label>
+        <input type="range" id="sizeSlider" min="50" max="200" value="100">
+
+        <button id="soundBtn">Play Sound Alert</button>
+        <audio id="alertSound" src="music.wav"></audio>
+        <button onclick="playAlert()">Play Sound</button>
+
+
+        <button id="modeBtn">Switch Mode</button>
+
+        <div class="box" id="box"></div>
+
+    </div>
+
+    <script src="lab9.js"></script>
+    <script>
+function playAlert() {
+    const sound = document.getElementById("alertSound");
+    sound.play();
+}
+</script>
+
+</body>
+</html>
